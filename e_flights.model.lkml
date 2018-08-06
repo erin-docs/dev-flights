@@ -10,6 +10,7 @@ datagroup: e_flights_default_datagroup {
 
 #WEBHOOK TEST
 #HOPING FOR FAILURE
+#removed secret from Looker not from Git
 
 persist_with: e_flights_default_datagroup
 
