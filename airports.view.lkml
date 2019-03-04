@@ -7,11 +7,6 @@ view: airports {
     sql: ${TABLE}.id ;;
   }
 
-  dimension: act_date {
-    type: string
-    sql: ${TABLE}.act_date ;;
-  }
-
   dimension: aero_cht {
     type: string
     sql: ${TABLE}.aero_cht ;;
@@ -148,6 +143,21 @@ view: airports {
   dimension: state {
     type: string
     sql: ${TABLE}.state ;;
+  }
+
+  dimension_group: act_date {
+    type: time
+    sql: ${TABLE}.act_date ;;
+  }
+
+  measure: list_date {
+    type: list
+    list_field: act_date_date
+  }
+
+  measure: list_date_reference {
+    type: string
+    sql: ${list_date} ;;
   }
 
   measure: count {
