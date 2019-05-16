@@ -112,6 +112,12 @@ view: airports {
     sql: ${TABLE}.longitude ;;
   }
 
+  dimension: lauren_location_test {
+    type: location
+    sql_latitude: ${latitude} ;;
+    sql_longitude: ${longitude} ;;
+  }
+
   dimension: major {
     type: string
     sql: ${TABLE}.major ;;
