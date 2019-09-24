@@ -40,7 +40,20 @@ view: airports {
   dimension: city {
     type: string
     sql: ${TABLE}.city ;;
-  }
+      html:
+          {% if {{value}} == "ALEXANDER" %}
+          <img src="https://bit.ly/2rNld4o" width="90%" height="90%" align="middle"/></div>
+          {% elsif {{value}} == "ALMOND" %}
+          <img src="https://bit.ly/1RM5Qm4" width="90%" height="90%" align="middle"/></div>
+          {% elsif {{value}} == "ALTOONA" %}
+          <img src="https://bit.ly/2T1Ayu1" width="90%" height="90%" align="middle"/></div>
+          {% elsif {{value}} == "AMERY" %}
+          <img src="https://bit.ly/2EwDhrg" width="90%" height="90%" align="middle"/></div>
+          {% elsif {{value}} == "ANAHEIM" %}
+          <img src="https://bit.ly/2BsesJW" width="90%" height="90%" align="middle"/></div>
+          {% endif %};;
+    }
+
 
   dimension: cntl_twr {
     type: string
@@ -110,6 +123,12 @@ view: airports {
   dimension: longitude {
     type: number
     sql: ${TABLE}.longitude ;;
+  }
+
+  dimension: lauren_location_test {
+    type: location
+    sql_latitude: ${latitude} ;;
+    sql_longitude: ${longitude} ;;
   }
 
   dimension: major {
