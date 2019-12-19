@@ -109,12 +109,13 @@ view: flights {
     {% else %}
     <p style="color: black; background-color: orange; font-size:100%; text-align:center">{{ rendered_value }}</p>
     {% endif %};;
-    drill_fields: []
+    drill_fields: [carrier,destination,origin]
   }
 
   measure: running_count {
     type: running_total
     sql: ${count} ;;
     direction: "column"
+    drill_fields: [carrier,destination,origin]
   }
 }
