@@ -111,4 +111,10 @@ view: flights {
     {% endif %};;
     drill_fields: []
   }
+
+  measure: running_count {
+    type: running_total
+    sql: ${count} ;;
+    direction: "column"
+  }
 }
