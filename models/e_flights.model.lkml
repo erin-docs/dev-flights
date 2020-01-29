@@ -1,4 +1,5 @@
-connection: "faa_redshift"
+connection: "thelook"
+
 
 # include all the views
 include: "/views/*.view"
@@ -27,6 +28,8 @@ explore: cal454 {}
 explore: carriers {}
 
 explore: flights {}
+
+explore: flights_localized {}
 
 explore: flights_by_day {}
 
