@@ -1,6 +1,6 @@
 # Readme Localization Notes
 
-Example query (**NEED TO UPDATE THE DEV INSTANCE NUMBER!!!**  Also need to push all changes to production before sudoing): [https://lookerv70.dev.looker.com/explore/e_flights/flights_localized?qid=66NFqlrDnMTxpnCQoES7cX](https://lookerv70.dev.looker.com/explore/e_flights/flights_localized?qid=66NFqlrDnMTxpnCQoES7cX)
+Example query (**NEED TO UPDATE THE DEV INSTANCE NUMBER!!!**  Also need to push all changes to production before sudoing): [https://lookerv70.dev.looker.com/projects/e_flights_PLEASE_DONT_EDIT/flights_localized?qid=66NFqlrDnMTxpnCQoES7cX](https://lookerv70.dev.looker.com/projects/e_flights_PLEASE_DONT_EDIT/flights_localized?qid=66NFqlrDnMTxpnCQoES7cX)
 
 Sudo as this user to see the "espanol" version: [https://lookerv70.dev.looker.com/admin/users/390/edit](https://lookerv70.dev.looker.com/admin/users/390/edit)
 
