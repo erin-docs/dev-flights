@@ -101,6 +101,21 @@ view: flights {
 
   measure: count {
     type: count
-    drill_fields: []
+    html:
+    {% if value > 100 %}
+    <p style="color: black; background-color: lightblue; font-size:100%; text-align:center">{{ rendered_value }}</p>
+    {% elsif value >1000 %}
+    <p style="color: black; background-color: lightgreen; font-size:100%; text-align:center">{{ rendered_value }}</p>
+    {% else %}
+    <p style="color: black; background-color: orange; font-size:100%; text-align:center">{{ rendered_value }}</p>
+    {% endif %};;
+    drill_fields: [carrier,destination,origin]
+  }
+
+  measure: running_count {
+    type: running_total
+    sql: ${count} ;;
+    direction: "column"
+    drill_fields: [carrier,destination,origin]
   }
 }
