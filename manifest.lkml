@@ -8,7 +8,6 @@ project_name: "e_flights"
 # }
 
 
-
 # remote dependency to https://docsadvance.dev.looker.com/projects/e_faa_folders
 remote_dependency: e_faa_folders {
   url: "https://github.com/erin-docs/e_faa_folders.git"
