@@ -71,9 +71,15 @@ view: aircraft {
     sql: ${TABLE}.certification ;;
   }
 
+  parameter: test {}
+
   dimension: city {
     type: string
     sql: ${TABLE}.city ;;
+    link: {
+      url: "/dashboards/151?parameter%20test={{ _field._name | url_encode }}"
+      label: "test"
+    }
   }
 
   dimension: country {

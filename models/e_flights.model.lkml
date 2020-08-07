@@ -1,7 +1,8 @@
-connection: "faa_redshift"
+connection: "thelook"
+
 
 # include all the views
-include: "*.view"
+include: "/views/*.view"
 
 datagroup: e_flights_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
@@ -27,6 +28,8 @@ explore: cal454 {}
 explore: carriers {}
 
 explore: flights {}
+
+explore: flights_localized {}
 
 explore: flights_by_day {}
 
