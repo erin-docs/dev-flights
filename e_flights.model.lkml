@@ -14,7 +14,12 @@ datagroup: e_flights_default_datagroup {
 
 persist_with: e_flights_default_datagroup
 
-explore: accidents {}
+explore: accidents {
+  access_filter: {
+    field: report_status
+    user_attribute: brandua
+  }
+}
 
 explore: aircraft {}
 
