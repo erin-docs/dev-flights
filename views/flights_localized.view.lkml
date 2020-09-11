@@ -30,21 +30,10 @@ view: flights_localized {
   }
 
   dimension: location {
-    #  label: "location"  <-- In the localization Docs, I use this as an example of something that doesn't have a label and so isn't localized
+    # label: "location"  <-- In the localization Docs, I use this as an example of something that doesn't have a label and so isn't localized
     type: string
     sql: ${TABLE}.location ;;
   }
-
-
-#
-#   dimension: from_US {
-#     label: "from_us"
-#     type: string
-#     sql: CASE
-#          WHEN ${TABLE}.country = "United States" THEN '{{ _localization["domestic"] }}'
-#          ELSE '{{ _localization["international"] }}'
-#        END;;
-#   }
 
 
 
@@ -52,10 +41,21 @@ view: flights_localized {
   #   label: "from_us"
   #   type: string
   #   sql: CASE
-  #       WHEN ${TABLE}.country = "United States" THEN "{{ _localization['domestic'] }}"
-  #       ELSE "{{ _localization['international'] }}"
-  #     END;;
+  #         WHEN ${TABLE}.country = "United States" THEN '{{ _localization["domestic"] }}'
+  #         ELSE '{{ _localization["international"] }}'
+  #       END;;
   # }
+
+
+
+  dimension: from_US {
+    label: "from_us"
+    type: string
+    sql: CASE
+        WHEN ${TABLE}.country = "United States" THEN "{{ _localization['domestic'] }}"
+        ELSE "{{ _localization['international'] }}"
+      END;;
+  }
 
 
 
