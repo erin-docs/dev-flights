@@ -48,14 +48,14 @@ view: flights_localized {
 
 
 
-  dimension: from_US {
-    label: "from_us"
-    type: string
-    sql: CASE
-        WHEN ${TABLE}.country = "United States" THEN "{{ _localization['domestic'] }}"
-        ELSE "{{ _localization['international'] }}"
-      END;;
-  }
+  # dimension: from_US {
+  #   label: "from_us"
+  #   type: string
+  #   sql: CASE
+  #       WHEN ${TABLE}.country = "United States" THEN "{{ _localization['domestic'] }}"
+  #       ELSE "{{ _localization['international'] }}"
+  #     END;;
+  # }
 
 
 
